@@ -1,4 +1,4 @@
-# Pet_Store_App_2.0
+# Pet_Store_App
 
 ## Introduction
 This Java application manages a pet store's inventory with a user-friendly interface. It allows users to add, delete, and display inventory items, as well as save and load inventory from text files.
