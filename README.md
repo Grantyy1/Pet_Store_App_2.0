@@ -1,9 +1,7 @@
 # Pet_Store_App_2.0
 
 ## Introduction
-This Java application is an Attendance Management System designed for teachers to efficiently track student attendance in courses.
-
-- The system allows teachers to create courses, register students, and assign seats to each student. Using a command-line interface, teachers can record attendance, tracking whether students were On Time, Late, Excused, or Unexcused. At the end of each session, the app provides summary and detailed attendance reports to help monitor student participation.
+This Java application manages a pet store's inventory with a user-friendly interface. It allows users to add, delete, and display inventory items, as well as save and load inventory from text files.
 
 ---
 
@@ -18,22 +16,23 @@ This Java application is an Attendance Management System designed for teachers t
 --- 
 ## Features
 
-### 🧑‍🎓 Student Management:
+### Inventory Addition:
+      - Users can add new pets to the inventory with their details
 
-- Create a student profile with a name and unique seat number.
-- Track attendance status (On Time, Late, Excused, or Unexcused).
-
-### 📚 Course Management:
-
-- Assign students to a course section and allocate seats.
-Store student records in an ArrayList.
-- Generate a summary report listing all students and their attendance.
-
-### 📝 Attendance Tracking:
-
-- Allows teachers to mark attendance for each student in a course.
-- Displays a detailed attendance report, including attendance breakdown per student.
-Uses interactive teacher prompts for attendance input.
+### Inventory Deletion 
+      - Users can remove pets from the inventory
+      
+### Inventory Display 
+      - The system shows all pets in a column-structured format using printf
+      
+### Data Persistence 
+      - The inventory can be saved to and loaded from text files using pipe-delimited format
+      
+### Categorization 
+      - Pets are categorized using enum types (HabitatType, BirdType, etc.)
+      
+### Optional Inventory Update 
+    - Mentioned as an extra credit feature, allowing modifications to existing inventory items
 
 ## Console Code 
 
