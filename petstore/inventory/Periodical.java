@@ -1,4 +1,4 @@
-package library.inventory;
+package petstore.inventory;
 
 public class Periodical extends Item {
     private String publisher;

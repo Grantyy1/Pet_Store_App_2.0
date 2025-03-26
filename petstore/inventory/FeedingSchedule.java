@@ -1,7 +1,9 @@
-package library.inventory;
+package petstore.inventory;
 
 public enum FeedingSchedule {
-    FICTION,
-    CHILDREN,
-    POETRY
+    ONCE_DAILY,
+    TWICE_DAILY,
+    THREE_TIMES_DAILY,
+    WEEKLY,
+    BIWEEKLY,
 }

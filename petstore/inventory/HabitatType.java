@@ -1,7 +1,8 @@
-package library.inventory;
+package petstore.inventory;
 
 public enum HabitatType {
-    MAGAZINE,
-    JOURNAL,
-    NEWSPAPER
+    CAGE,
+    AQUARIUM,
+    TERRARIUM,
+    OPEN_SPACE
 }
