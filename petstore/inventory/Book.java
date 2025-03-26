@@ -2,15 +2,15 @@ package library.inventory;
 
 public class Book extends Item {
     private String author;
-    private Genre genre;
+    private FeedingSchedule genre;
 
-    public Book(String title, String dateReceived, String author, Genre genre) throws Exception {
+    public Book(String title, String dateReceived, String author, FeedingSchedule genre) throws Exception {
         super(title, dateReceived);
         setAuthor(author);
         setGenre(genre);
     }
 
-    public Book(int id, String title, String dateReceived, String author, Genre genre) throws Exception {
+    public Book(int id, String title, String dateReceived, String author, FeedingSchedule genre) throws Exception {
         super(id, title, dateReceived);
         setAuthor(author);
         setGenre(genre);
@@ -27,9 +27,9 @@ public class Book extends Item {
         this.author = author;
     }
 
-    public Genre getGenre() { return genre; }
+    public FeedingSchedule getGenre() { return genre; }
 
-    public void setGenre(Genre genre) { this.genre = genre; }
+    public void setGenre(FeedingSchedule genre) { this.genre = genre; }
 
     @Override
     public void displayItem(){

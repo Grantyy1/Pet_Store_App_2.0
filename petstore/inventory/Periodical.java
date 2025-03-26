@@ -2,15 +2,15 @@ package library.inventory;
 
 public class Periodical extends Item {
     private String publisher;
-    private Category category;
+    private HabitatType category;
 
-    public Periodical(String title, String dateReceived, String publisher, Category category) throws Exception {
+    public Periodical(String title, String dateReceived, String publisher, HabitatType category) throws Exception {
         super(title, dateReceived);
         setPublisher(publisher);
         setCategory(category);
     }
 
-    public Periodical(int id, String title, String dateReceived, String publisher, Category category) throws Exception {
+    public Periodical(int id, String title, String dateReceived, String publisher, HabitatType category) throws Exception {
         super(id, title, dateReceived);
         setPublisher(publisher);
         setCategory(category);
@@ -29,9 +29,9 @@ public class Periodical extends Item {
         this.publisher = publisher;
     }
 
-    public Category getCategory() { return category; }
+    public HabitatType getCategory() { return category; }
 
-    public void setCategory(Category category) {
+    public void setCategory(HabitatType category) {
         this.category = category;
     }
 

@@ -3,9 +3,9 @@ package petstore.App;
 
 import library.inventory.Item;
 import library.inventory.Book;
-import library.inventory.Genre;
+import library.inventory.FeedingSchedule;
 import library.inventory.Periodical;
-import library.inventory.Category;
+import library.inventory.HabitatType;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -16,10 +16,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *  @author PUT_YOUR_NAMES_HERE
- *  @since PUT_THE_CURRENT_DATE_HERE
+ *  @author Grant Peverett
+ *  @since 3/26/2025
  *  @version 1.0 beta
- *  @see <a href="{PUT_YOUR_URL_HERE}">GitHub Repository</a>
+ *  @see <a href="{https://github.com/Grantyy1/Pet_Store_App_2.0/blob/main/petstore/App/Input.java}">GitHub Repository</a>
  *
  */
 public class Pet {
@@ -69,13 +69,13 @@ public class Pet {
         Book book;
         int userInput;
         String author;
-        Genre genre = null;
+        FeedingSchedule genre = null;
 
         author = Input.getString("Author: ");
 
         try {
             userInput = Input.getIntRange("Genre 1=Fiction, 2=Children, 3=Poetry: ", 1, 3);
-            genre = Genre.values()[userInput - 1];
+            genre = FeedingSchedule.values()[userInput - 1];
         } catch (Exception e){
             throw new Exception("Invalid data! Book Genre = " + genre);
         }
@@ -90,13 +90,13 @@ public class Pet {
 
         Periodical periodical;
         String publisher;
-        Category category = null;
+        HabitatType category = null;
 
         publisher = Input.getString("Publisher: ");
 
         try {
             int userInput = Input.getIntRange("Category 1=Magazine, 2=Journal, 3=Newspaper: ", 1, 3);
-            category = Category.values()[userInput - 1];
+            category = HabitatType.values()[userInput - 1];
         } catch (Exception e){
             throw new Exception("Invalid data! Periodical Category = " + category);
         }
@@ -227,12 +227,12 @@ public class Pet {
                 //0=item 1=id, 2=title, 3=date, 4=description, 5=author/publisher, 6=genre/category
                 switch(data[0]){
                     case "BOOK":
-                        Book b = new Book(Integer.parseInt(data[1]), data[2], data[3], data[5], Genre.valueOf(data[6]));
+                        Book b = new Book(Integer.parseInt(data[1]), data[2], data[3], data[5], FeedingSchedule.valueOf(data[6]));
                         b.setDescription(data[4]);
                         inventory.add(b);
                         break;
                     case "PERIODICAL":
-                        Periodical p = new Periodical(Integer.parseInt(data[1]), data[2], data[3], data[5], Category.valueOf(data[6]));
+                        Periodical p = new Periodical(Integer.parseInt(data[1]), data[2], data[3], data[5], HabitatType.valueOf(data[6]));
                         p.setDescription(data[4]);
                         inventory.add(p);
                         break;
