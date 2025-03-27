@@ -2,7 +2,6 @@
 package petstore.App;
 
 import petstore.inventory.FeedingSchedule;
-import petstore.inventory.Periodical;
 import petstore.inventory.HabitatType;
 
 import java.io.BufferedReader;
@@ -84,9 +83,9 @@ public class Pet {
         return book;
     } // end of addBook method
 
-    private Periodical addPeriodical(String title, String dateReceived, String description) throws Exception {
+    private WaterType addPeriodical(String title, String dateReceived, String description) throws Exception {
 
-        Periodical periodical;
+        WaterType periodical;
         String publisher;
         HabitatType category = null;
 
@@ -99,7 +98,7 @@ public class Pet {
             throw new Exception("Invalid data! Periodical Category = " + category);
         }
 
-        periodical = new Periodical(title, dateReceived, publisher, category);
+        periodical = new WaterType(title, dateReceived, publisher, category);
         periodical.setDescription(description);
 
         return periodical;
@@ -125,7 +124,7 @@ public class Pet {
                 Input.getLine("Press enter to continue...");
                 break;
             case 2:
-                Periodical p = addPeriodical(title, dateReceived, description);
+                WaterType p = addPeriodical(title, dateReceived, description);
                 inventory.add(p);
                 System.out.println("Successful Add: " + p);
                 Input.getLine("Press enter to continue...");
@@ -155,7 +154,7 @@ public class Pet {
         System.out.println("ID  Title           Date Rec'd Publisher       Category");
         System.out.println("--- --------------- ---------- --------------- ----------");
         for (petstore.inventory.Bird item : inventory) {
-            if (item instanceof Periodical){
+            if (item instanceof WaterType){
                 item.displayItem();
             }
         }
@@ -180,15 +179,15 @@ public class Pet {
                 // The file will be piped delimited so each field is separated by a |
                 if (item instanceof petstore.inventory.Fish)
                     bw.write("BOOK|");
-                else if (item instanceof Periodical)
+                else if (item instanceof WaterType)
                     bw.write("PERIODICAL|");
 
                 bw.write(item.getId() + "|" + item.getTitle() + "|" + item.getDateReceived() + "|" + item.getDescription() + "|");
 
                 if (item instanceof petstore.inventory.Fish)
                     bw.write(((petstore.inventory.Fish) item).getAuthor() + "|" + ((petstore.inventory.Fish) item).getGenre() + "\n");
-                else if (item instanceof Periodical)
-                    bw.write(((Periodical) item).getPublisher() + "|" + ((Periodical) item).getCategory() + "\n");
+                else if (item instanceof WaterType)
+                    bw.write(((WaterType) item).getPublisher() + "|" + ((WaterType) item).getCategory() + "\n");
             }
 
             bw.flush();
@@ -230,7 +229,7 @@ public class Pet {
                         inventory.add(b);
                         break;
                     case "PERIODICAL":
-                        Periodical p = new Periodical(Integer.parseInt(data[1]), data[2], data[3], data[5], HabitatType.valueOf(data[6]));
+                        WaterType p = new WaterType(Integer.parseInt(data[1]), data[2], data[3], data[5], HabitatType.valueOf(data[6]));
                         p.setDescription(data[4]);
                         inventory.add(p);
                         break;
