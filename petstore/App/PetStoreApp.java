@@ -1,6 +1,6 @@
 package petstore.App;
 
-import petstore.inventory.*; //asterisks call all the java classes and enums related to inventory package.
+import petstore.inventory.*; // I used asterisks here to call all the java classes and enums related to inventory package.
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
