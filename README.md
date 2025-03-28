@@ -34,7 +34,7 @@ This Java application manages a pet store's inventory with a user-friendly inter
 ### Optional Inventory Update 
     - Mentioned as an extra credit feature, allowing modifications to existing inventory items
 
-## Console Code 
+## Console Code for App
 
 **Pet_Store_App**
 
@@ -42,13 +42,9 @@ This Java application manages a pet store's inventory with a user-friendly inter
 
 <img src="https://github.com/Grantyy1/Pet_Store_App_2.0/blob/main/petstore/App/Input.java" alt="Input.java"/>
 
-├── **Course.java**         # Main application to interact with the user
+├── **PetStoreApp**         # Main application to interact with the user
 
-<img src="https://github.com/Grantyy1/Attendance_App/blob/master/src/Course.java" alt="Attendance_App"/>
-
-├── **AttendanceApp.java**  # Main application to interact with the user
-
-<img src="https://github.com/Grantyy1/Attendance_App/blob/master/src/AttendanceApp.java" alt="Attendance_App"/>
+<img src="https://github.com/Grantyy1/Pet_Store_App_2.0/blob/main/petstore/App/PetStoreApp.java" alt="PetStoreApp"/>
 
 ---
 
