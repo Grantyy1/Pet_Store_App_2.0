@@ -48,41 +48,36 @@ This Java application manages a pet store's inventory with a user-friendly inter
 
 ---
 
-## Code Structure
+## Project Structure
+The application is divided into two main packages:
 
-* Attendance Structure:
+## petstore.inventory: Contains classes and enums for pet inventory data
 
-<div align="center">
-  <kbd>
-    <img src="./assets/ATTENDANCE STRUC.jpg" />
-  </kbd>
-</div>
+Pet.java: Base class for all pets
 
-* Course Structure:
+Fish.java: Class for fish inventory items
 
-<div align="center">
-  <kbd>
-    <img src="./assets/COURSE STRUC.jpg" />
-  </kbd>
-</div>
+Bird.java: Class for bird inventory items
 
-* Student Structure: 
+HabitatType.java: Enum for different pet habitats
 
-<div align="center">
-  <kbd>
-    <img src="./assets/STUDENT STRUC.jpg" />
-  </kbd>
-</div>
+FeedingSchedule.java: Enum for pet feeding schedules
 
-* Input Structure:
+WaterType.java: Enum specific to fish water requirements
 
-<div align="center">
-  <kbd>
-    <img src="./assets/INPUT STRUC.jpg" />
-  </kbd>
-</div>
+## petstore.app: Contains classes for managing the user's interface
+
+PetStoreApp.java: Main application class with menu and inventory management
+
+Input.java: Utility class for handling user input with validation
 
 ---
+## Class Diagram
+      - A UML class diagram is included in this repository.
+      
+<img src="https://github.com/Grantyy1/Pet_Store_App_2.0/blob/main/PetStoreUML.jpg" alt="Profile Picture" /> 
+      
+--- 
 
 ## Technologies Used
 - ![Amazon Corretto](https://img.shields.io/badge/Amazon_Corretto-blue?style=for-the-badge&logo=amazon-aws&logoColor=white)
