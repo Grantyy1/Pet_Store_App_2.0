@@ -72,6 +72,12 @@ PetStoreApp.java: Main application class with menu and inventory management
 Input.java: Utility class for handling user input with validation
 
 ---
+## Class Diagram
+      - A UML class diagram is included in this repository.
+      
+<img src="https://github.com/Grantyy1/Pet_Store_App_2.0/blob/main/PetStoreUML.jpg" alt="Profile Picture" /> 
+      
+--- 
 
 ## Technologies Used
 - ![Amazon Corretto](https://img.shields.io/badge/Amazon_Corretto-blue?style=for-the-badge&logo=amazon-aws&logoColor=white)
