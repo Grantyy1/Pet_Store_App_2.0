@@ -6,43 +6,53 @@ import java.time.format.DateTimeFormatter;
 /**
  * Base class for all pets in the pet store inventory system.
  * Provides common properties and behaviors for all pet types.
- * @author Your Group Member Names Here
- * @since March 26, 2025
+ * @author Grant Peverett
+ * @since March 28, 2025
  * @version 1.0 beta
- * @see <a href="https://github.com/yourusername/petstoreapp">GitHub Repository</a>
+ * @see <a href="https://github.com/Grantyy1/Pet_Store_App_2.0/blob/main/petstore/inventory/Pet.java">GitHub Repository</a>
  */
 public class Pet {
 
     /**
-     * Tracks the last assigned ID to ensure unique IDs for each pet
+     * Tracks the last assigned ID to ensure unique IDs for each pet.
      */
     private static int lastId = 0;
     /**
-     * Date formatter for consistent date string representation
+     * Date formatter for consistent date string representation.
      * */
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
-    /** Unique identifier for each pet */
+    /**
+     * Unique identifier for each pet.
+     */
     protected final int id;
-    /** Name of the pet */
+    /**
+     * Name of the pet.
+     */
     protected String name;
-    /** Date when the pet was acquired by the store */
+    /**
+     * Date when the pet was acquired by the store.
+     */
     protected LocalDate dateAcquired;
-
-    /** Retail price of the pet in dollars */
+    /**
+     * Retail price of the pet in dollars
+     */
     protected double price;
-    /** Type of habitat required for the pet */
+    /**
+     * Type of habitat required for the pet
+     */
     protected HabitatType habitat;
-    /** Additional description or notes about the pet */
+    /**
+     * Additional description or notes about the pet
+     */
     protected String description;
 
     /**
      * Constructor for creating a new pet with auto-generated ID.
-     *
-     * @param name The name of the pet
-     * @param dateAcquired The date when the pet was acquired (MM-dd-yyyy format)
-     * @param price The retail price of the pet
-     * @param habitat The type of habitat required for the pet
-     * @throws Exception If any validation errors occur during object creation
+     * @param name The name of the pet.
+     * @param dateAcquired The date when the pet was acquired (MM-dd-yyyy format).
+     * @param price The retail price of the pet.
+     * @param habitat The type of habitat required for the pet.
+     * @throws Exception If any validation errors occur during object creation.
      */
     public Pet(String name, String dateAcquired, double price, HabitatType habitat) throws Exception {
         this.id = ++Pet.lastId;
@@ -54,13 +64,12 @@ public class Pet {
 
     /**
      * Constructor for creating a pet with a specific ID (used when loading from file).
-     *
-     * @param id The specific ID to assign to this pet
-     * @param name The name of the pet
-     * @param dateAcquired The date when the pet was acquired (MM-dd-yyyy format)
-     * @param price The retail price of the pet
-     * @param habitat The type of habitat required for the pet
-     * @throws Exception If any validation errors occur during object creation
+     * @param id The specific ID to assign to this pet.
+     * @param name The name of the pet.
+     * @param dateAcquired The date when the pet was acquired (MM-dd-yyyy format).
+     * @param price The retail price of the pet.
+     * @param habitat The type of habitat required for the pet.
+     * @throws Exception If any validation errors occur during object creation.
      */
     public Pet(int id, String name, String dateAcquired, double price, HabitatType habitat) throws Exception {
         this.id = id;
@@ -71,26 +80,26 @@ public class Pet {
     }
 
     /**
-     * Sets the static lastId counter when loading pets from file
+     * Sets the static lastId counter when loading pets from file.
      * to ensure new pets get unique IDs.
-     * @param lastId The highest ID found in the loaded inventory
+     * @param lastId The highest ID found in the loaded inventory.
      */
     public static void setLastId(int lastId) { Pet.lastId = lastId; }
     /**
      * Gets the unique identifier of this pet.
-     * @return The pet's ID
+     * @return The pet's ID.
      */
     public int getId() { return id; }
     /**
      * Gets the name of the pet.
-     * @return The pet's name
+     * @return The pet's name.
      */
     public String getName() { return name; }
 
     /**
      * Sets the name of the pet with validation.
-     * @param name The name to set
-     * @throws Exception If the name is blank or empty
+     * @param name The name to set.
+     * @throws Exception If the name is blank or empty.
      */
     public void setName(String name) throws Exception {
         name = name.trim();
@@ -104,8 +113,7 @@ public class Pet {
 
     /**
      * Gets the date the pet was acquired in formatted string form.
-     *
-     * @return The formatted date string (MM-dd-yyyy)
+     * @return The formatted date string (MM-dd-yyyy).
      */
     public String getDateAcquired() {
         return dateAcquired.format(Pet.formatter);
@@ -113,8 +121,8 @@ public class Pet {
 
     /**
      * Sets the acquired date from a string with validation.
-     * @param dateAcquired The date string in MM-dd-yyyy format
-     * @throws Exception If the date format is invalid
+     * @param dateAcquired The date string in MM-dd-yyyy format.
+     * @throws Exception If the date format is invalid.
      */
     public void setDateAcquired(String dateAcquired) throws Exception {
         try {
@@ -126,14 +134,14 @@ public class Pet {
 
     /**
      * Gets the retail price of the pet.
-     * @return The pet's price
+     * @return The pet's price.
      */
     public double getPrice() { return price; }
 
     /**
      * Sets the retail price with validation.
-     * @param price The price to set
-     * @throws Exception If the price is negative
+     * @param price The price to set.
+     * @throws Exception If the price is negative.
      */
     public void setPrice(double price) throws Exception {
         if (price < 0) {
@@ -144,25 +152,25 @@ public class Pet {
 
     /**
      * Gets the habitat type required for the pet.
-     * @return The pet's habitat type
+     * @return The pet's habitat type.
      */
     public HabitatType getHabitat() { return habitat; }
 
     /**
      * Sets the habitat type for the pet.
-     * @param habitat The habitat type to set
+     * @param habitat The habitat type to set.
      */
     public void setHabitat(HabitatType habitat) { this.habitat = habitat; }
 
     /**
      * Gets the additional description of the pet.
-     * @return The pet's description
+     * @return The pet's description.
      */
     public String getDescription() { return description; }
 
     /**
      * Sets the description of the pet.
-     * @param description The description to set
+     * @param description The description to set.
      */
     public void setDescription(String description) {
         this.description = description != null ? description.trim() : "";
@@ -178,7 +186,7 @@ public class Pet {
 
     /**
      * Returns a string representation of the pet.
-     * @return A string with the pet's basic information
+     * @return A string with the pet's basic information.
      */
     @Override
     public String toString() {
