@@ -3,7 +3,7 @@ package petstore.inventory;
  * Defines the frequency at which different pets need to be fed.
  * @author Grant Peverett
  * @since March 28, 2025
- * @version 1.0 beta
+ * @version 1.0 beta 2
  * @see <a href="https://github.com/Grantyy1/Pet_Store_App_2.0/blob/main/petstore/inventory/FeedingSchedule.java">GitHub Repository</a>
  */
 
