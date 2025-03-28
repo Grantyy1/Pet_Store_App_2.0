@@ -22,14 +22,14 @@ This Java application manages a pet store's inventory with a user-friendly inter
 ### Inventory Deletion 
       - Users can remove pets from the inventory
       
-### Inventory Display 
-      - The system shows all pets in a column-structured format using printf
+### User-Friendly Interface: 
+      - Simple console menu for navigating application features.
       
 ### Data Persistence 
-      - The inventory can be saved to and loaded from text files using pipe-delimited format
+      - The inventory can be saved to and loaded from text file.
       
 ### Categorization 
-      - Pets are categorized using enum types (HabitatType, BirdType, etc.)
+      - Pets are categorized using enum types (HabitatType, WaterType, etc.)
       
 ### Optional Inventory Update 
     - Mentioned as an extra credit feature, allowing modifications to existing inventory items
@@ -38,9 +38,9 @@ This Java application manages a pet store's inventory with a user-friendly inter
 
 **Pet_Store_App**
 
-├── **Student.java**        # Class representing a Student Account
+├── **Input.java**        # Class representing the Users Input
 
-<img src="https://github.com/Grantyy1/Attendance_App/blob/master/src/Student.java" alt="Attendance_App"/>
+<img src="https://github.com/Grantyy1/Pet_Store_App_2.0/blob/main/petstore/App/Input.java" alt="Pet_Store_App_2.0"/>
 
 ├── **Course.java**         # Main application to interact with the user
 
