@@ -48,39 +48,22 @@ This Java application manages a pet store's inventory with a user-friendly inter
 
 ---
 
-## Code Structure
+## Project Structure
+The application is divided into two main packages:
 
-* Attendance Structure:
+## petstore.inventory: Contains classes and enums for pet inventory data
 
-<div align="center">
-  <kbd>
-    <img src="./assets/ATTENDANCE STRUC.jpg" />
-  </kbd>
-</div>
+Pet.java: Base class for all pets
+Fish.java: Class for fish inventory items
+Bird.java: Class for bird inventory items
+HabitatType.java: Enum for different pet habitats
+FeedingSchedule.java: Enum for pet feeding schedules
+WaterType.java: Enum specific to fish water requirements
 
-* Course Structure:
+## petstore.app: Contains classes for managing the user's interface
 
-<div align="center">
-  <kbd>
-    <img src="./assets/COURSE STRUC.jpg" />
-  </kbd>
-</div>
-
-* Student Structure: 
-
-<div align="center">
-  <kbd>
-    <img src="./assets/STUDENT STRUC.jpg" />
-  </kbd>
-</div>
-
-* Input Structure:
-
-<div align="center">
-  <kbd>
-    <img src="./assets/INPUT STRUC.jpg" />
-  </kbd>
-</div>
+PetStoreApp.java: Main application class with menu and inventory management
+Input.java: Utility class for handling user input with validation
 
 ---
 
