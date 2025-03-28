@@ -54,15 +54,21 @@ The application is divided into two main packages:
 ## petstore.inventory: Contains classes and enums for pet inventory data
 
 Pet.java: Base class for all pets
+
 Fish.java: Class for fish inventory items
+
 Bird.java: Class for bird inventory items
+
 HabitatType.java: Enum for different pet habitats
+
 FeedingSchedule.java: Enum for pet feeding schedules
+
 WaterType.java: Enum specific to fish water requirements
 
 ## petstore.app: Contains classes for managing the user's interface
 
 PetStoreApp.java: Main application class with menu and inventory management
+
 Input.java: Utility class for handling user input with validation
 
 ---
