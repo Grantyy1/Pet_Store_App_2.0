@@ -40,7 +40,7 @@ This Java application manages a pet store's inventory with a user-friendly inter
 
 ├── **Input.java**        # Class representing the Users Input
 
-<img src="https://github.com/Grantyy1/Pet_Store_App_2.0/blob/main/petstore/App/Input.java" alt="Pet_Store_App_2.0"/>
+<img src="https://github.com/Grantyy1/Pet_Store_App_2.0/blob/main/petstore/App/Input.java" alt="Input.java"/>
 
 ├── **Course.java**         # Main application to interact with the user
 
