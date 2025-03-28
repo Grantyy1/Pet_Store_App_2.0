@@ -1,7 +1,6 @@
 package petstore.inventory;
 
 /**
- * Enumeration of water types for aquatic pets.
  * Defines the different water environments where aquatic pets can live.
  * @author Grant Peverett
  * @since March 28, 2025

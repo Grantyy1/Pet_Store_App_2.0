@@ -12,13 +12,15 @@ import java.util.Scanner;
  * @see <a href="https://github.com/Grantyy1/Pet_Store_App_2.0/blob/main/petstore/App/Input.java">GitHub Repository</a>
  */
 public class Input {
-    /** Scanner object for reading input from the console */
+    /**
+     * Scanner object for reading input from the console.
+     */
     public static Scanner sc = new Scanner(System.in);
 
     /**
      * Gets a line of text from the user without validation.
-     * @param prompt The message to display to the user
-     * @return The entered text
+     * @param prompt The message to display to the user.
+     * @return The entered text.
      */
     public static String getLine(String prompt) {
         System.out.print(prompt);
@@ -27,8 +29,8 @@ public class Input {
 
     /**
      * Gets a non-empty string from the user with validation.
-     * @param prompt The message to display to the user
-     * @return The validated non-empty string
+     * @param prompt The message to display to the user.
+     * @return The validated non-empty string.
      */
     public static String getString(String prompt) {
         String userInput;
@@ -107,8 +109,8 @@ public class Input {
 
     /**
      * Gets a double from the user with validation.
-     * @param prompt The message to display to the user
-     * @return The validated double
+     * @param prompt The message to display to the user.
+     * @return The validated double.
      */
     public static double getDouble(String prompt) {
         double userInput;
@@ -130,10 +132,10 @@ public class Input {
 
     /**
      * Gets a double from the user within a specified range.
-     * @param prompt The message to display to the user
-     * @param low The minimum acceptable value (inclusive)
-     * @param high The maximum acceptable value (inclusive)
-     * @return The validated double within the specified range
+     * @param prompt The message to display to the user.
+     * @param low The minimum acceptable value (inclusive).
+     * @param high The maximum acceptable value (inclusive).
+     * @return The validated double within the specified range.
      */
     public static double getDoubleRange(String prompt, double low, double high) {
         double userInput;
@@ -163,8 +165,8 @@ public class Input {
 
     /**
      * Gets a date string from the user in MM-dd-yyyy format with validation.
-     * @param prompt The message to display to the user
-     * @return The validated date string in MM-dd-yyyy format
+     * @param prompt The message to display to the user.
+     * @return The validated date string in MM-dd-yyyy format.
      */
     public static String getDate(String prompt) {
         String userInput;
@@ -187,8 +189,7 @@ public class Input {
 
     /**
      * Gets a boolean value from the user using various yes/no inputs.
-     * Accepts "yes", "y", "true", "t", "1" for true and
-     * "no", "n", "false", "f", "0" for false.
+     * Accepts "yes", "y", "true", "t", "1" for true and "no", "n", "false", "f", "0" for false.
      * @param prompt The message to display to the user
      * @return The boolean value (true or false)
      */

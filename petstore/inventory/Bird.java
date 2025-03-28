@@ -10,16 +10,16 @@ package petstore.inventory;
  */
 public class Bird extends Pet {
     /**
-     * Indicates whether the bird can fly
+     * Indicates whether the bird can fly.
      */
     private boolean canFly;
     /**
-     * The feeding schedule for this bird
+     * The feeding schedule for this bird.
      */
     private FeedingSchedule feedingSchedule;
 
     /**
-     * Constructor for creating a new bird with auto-generated ID.
+     * Creates a new bird with auto-generated ID.
      * @param name The name of the bird.
      * @param dateAcquired The date when the bird was acquired (MM-dd-yyyy format).
      * @param price The retail price of the bird.
@@ -34,7 +34,7 @@ public class Bird extends Pet {
     }
 
     /**
-     * Constructor for creating a bird with a specific ID (used when loading from file).
+     * Creates a bird with a specific ID (used when loading from file).
      * @param id The specific ID to assign to this bird.
      * @param name The name of the bird.
      * @param dateAcquired The date when the bird was acquired (MM-dd-yyyy format).

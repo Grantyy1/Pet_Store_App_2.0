@@ -1,6 +1,6 @@
 package petstore.App;
 
-import petstore.inventory.*;
+import petstore.inventory.*; //asterisks call all the java classes and enums related to inventory package.
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -11,30 +11,52 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Your Group Member Names Here
- * @since March 26, 2025
+ * Main application class for the Pet Store inventory management system.
+ * Provides functionality for adding, deleting, displaying, saving, and loading pet inventory.
+ * @author Grant Peverett
+ * @since March 28, 2025
  * @version 1.0 beta
- * @see <a href="https://github.com/yourusername/petstoreapp">GitHub Repository</a>
+ * @see <a href="https://github.com/Grantyy1/Pet_Store_App_2.0/blob/main/petstore/App/PetStoreApp.java">GitHub Repository</a>
  */
 public class PetStoreApp {
 
+    /**
+     * File name for saving/loading the inventory data.
+     */
     private static final String INVENTORY_FILE = "PetStoreData.txt";
-
+    /**
+     * Formatted string of equals signs for double-line headers.
+     */
     private static final String DOUBLE_DASH_LINE = String.format("%65s", "").replace(' ', '=');
+    /**
+     * Formatted string of hyphens for single-line headers.
+     */
     private static final String SINGLE_DASH_LINE = DOUBLE_DASH_LINE.replace('=', '-');
-
+    /**
+     * List to store all pets in the inventory.
+     */
     private final List<Pet> inventory;
 
+    /**
+     * Initializes an empty inventory list.
+     */
     public PetStoreApp() {
         this.inventory = new ArrayList<>();
     } // end of constructor
 
+    /**
+     * Displays the application header with formatting.
+     */
     private void displayAppHeading() {
         System.out.println(DOUBLE_DASH_LINE);
         System.out.println("Welcome to the Pet Store App");
         System.out.println(DOUBLE_DASH_LINE);
     } // end of displayAppHeading method
 
+    /**
+     * Handles the process of deleting a pet from the inventory.
+     * Prompts the user for a pet ID and removes the matching pet if found.
+     */
     private void deleteItem() {
         System.out.println("Delete Pet");
         System.out.println(SINGLE_DASH_LINE);
@@ -54,6 +76,15 @@ public class PetStoreApp {
         petstore.App.Input.getLine("Press enter to continue...");
     } // end of deleteItem method
 
+    /**
+     * Creates a new Fish object with user input.
+     * @param name The name of the fish.
+     * @param dateAcquired The date the fish was acquired.
+     * @param price The price of the fish.
+     * @param description Additional description of the fish.
+     * @return The newly created Fish object.
+     * @throws Exception If validation errors occur during object creation.
+     */
     private Fish addFish(String name, String dateAcquired, double price, String description) throws Exception {
         Fish fish;
         WaterType waterType = null;
@@ -79,6 +110,15 @@ public class PetStoreApp {
         return fish;
     } // end of addFish method
 
+    /**
+     * Creates a new Bird object with user input.
+     * @param name The name of the bird.
+     * @param dateAcquired The date the bird was acquired.
+     * @param price The price of the bird.
+     * @param description Additional description of the bird.
+     * @return The newly created Bird object.
+     * @throws Exception If validation errors occur during object creation.
+     */
     private Bird addBird(String name, String dateAcquired, double price, String description) throws Exception {
         Bird bird;
         boolean canFly;
@@ -99,6 +139,11 @@ public class PetStoreApp {
         return bird;
     } // end of addBird method
 
+    /**
+     * Handles the process of adding a new pet to the inventory.
+     * Collects common pet information, then specific information based on the type of pet being added.
+     * @throws Exception If validation errors occur during the process.
+     */
     private void addItem() throws Exception {
         System.out.println("Add Pet");
         System.out.println(SINGLE_DASH_LINE);
@@ -129,6 +174,10 @@ public class PetStoreApp {
         } // end of switch
     } // end of addItem method
 
+    /**
+     * Displays all pets in the inventory, categorized by type.
+     * Formats the output in a tabular format for readability.
+     */
     private void displayInventory() {
         System.out.println("Fish Inventory");
         System.out.println(SINGLE_DASH_LINE);
@@ -155,6 +204,10 @@ public class PetStoreApp {
         petstore.App.Input.getLine("Press enter to continue...");
     } // end of displayInventory
 
+    /**
+     * Saves the current inventory to a text file in a pipe-delimited format.
+     * Each pet is saved with its type and all relevant properties.
+     */
     public void saveInventory() {
         System.out.println("Saving data! Please wait...");
 
@@ -186,6 +239,11 @@ public class PetStoreApp {
         petstore.App.Input.getLine("Press any key to continue...");
     } // end of saveInventory
 
+    /**
+     * Loads the inventory from a text file.
+     * Clears the current inventory and replaces it with the data from the file.
+     * The file should be in the pipe-delimited format created by saveInventory().
+     */
     public void loadInventory() {
         System.out.println("Loading data! Please wait...");
 
@@ -242,6 +300,11 @@ public class PetStoreApp {
         petstore.App.Input.getLine("Press any key to continue...");
     } // end of loadInventory method
 
+    /**
+     * Displays the main menu and handles user navigation through the application.
+     * Provides options for adding, deleting, displaying, saving, and loading inventory.
+     * @throws Exception If an error occurs during menu operations.
+     */
     private void mainMenu() throws Exception {
         boolean keepRunning = true;
 
@@ -296,6 +359,12 @@ public class PetStoreApp {
         } // end of while loop
     } // end of mainMenu
 
+    /**
+     * Main method to launch the Pet Store application.
+     * Creates an instance of PetStoreApp, displays the heading,
+     * and enters the main menu loop.
+     * @param args Command line arguments.
+     */
     public static void main(String[] args) {
         PetStoreApp app = new PetStoreApp();
 

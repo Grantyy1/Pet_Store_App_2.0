@@ -1,7 +1,6 @@
 package petstore.inventory;
 
 /**
- * Enumeration of possible habitat types for pets in the store.
  * Defines the different environments where pets can live.
  * @author Grant Peverett
  * @since March 28, 2025
@@ -10,19 +9,19 @@ package petstore.inventory;
  */
 public enum HabitatType {
     /**
-     * For birds and other pets requiring cages
+     * For birds and other pets requiring cages.
      */
     CAGE,
     /**
-     * For fish and aquatic pets
+     * For fish and aquatic pets.
      */
     AQUARIUM,
     /**
-     * For reptiles, amphibians, and certain insects
+     * For reptiles, amphibians, and certain insects.
      */
     TERRARIUM,
     /**
-     * For pets that don't require enclosures
+     * For pets that don't require enclosures.
      */
     OPEN_SPACE
 }

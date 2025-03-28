@@ -11,16 +11,16 @@ package petstore.inventory;
 public class Fish extends Pet {
 
     /**
-     * The type of water required for this fish
+     * The type of water required for this fish.
      */
     private WaterType waterType;
     /**
-     * The feeding schedule for this fish
+     * The feeding schedule for this fish.
      */
     private FeedingSchedule feedingSchedule;
 
     /**
-     * Constructor for creating a new fish with auto-generated ID.
+     * Creates a new fish with auto-generated ID.
      * @param name The name of the fish.
      * @param dateAcquired The date when the fish was acquired (MM-dd-yyyy format).
      * @param price The retail price of the fish.
@@ -35,7 +35,7 @@ public class Fish extends Pet {
     }
 
     /**
-     * Constructor for creating a fish with a specific ID (used when loading from file).
+     * Creates a fish with a specific ID (used when loading from file).
      * @param id The specific ID to assign to this fish.
      * @param name The name of the fish.
      * @param dateAcquired The date when the fish was acquired (MM-dd-yyyy format).

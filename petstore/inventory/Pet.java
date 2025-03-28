@@ -47,7 +47,7 @@ public class Pet {
     protected String description;
 
     /**
-     * Constructor for creating a new pet with auto-generated ID.
+     * Creates a new pet with auto-generated ID.
      * @param name The name of the pet.
      * @param dateAcquired The date when the pet was acquired (MM-dd-yyyy format).
      * @param price The retail price of the pet.
@@ -63,7 +63,7 @@ public class Pet {
     }
 
     /**
-     * Constructor for creating a pet with a specific ID (used when loading from file).
+     * Creates a pet with a specific ID (used when loading from file).
      * @param id The specific ID to assign to this pet.
      * @param name The name of the pet.
      * @param dateAcquired The date when the pet was acquired (MM-dd-yyyy format).
@@ -80,16 +80,17 @@ public class Pet {
     }
 
     /**
-     * Sets the static lastId counter when loading pets from file.
-     * to ensure new pets get unique IDs.
+     * Sets the static lastId counter when loading pets from file to ensure new pets get unique IDs.
      * @param lastId The highest ID found in the loaded inventory.
      */
     public static void setLastId(int lastId) { Pet.lastId = lastId; }
+
     /**
      * Gets the unique identifier of this pet.
      * @return The pet's ID.
      */
     public int getId() { return id; }
+
     /**
      * Gets the name of the pet.
      * @return The pet's name.

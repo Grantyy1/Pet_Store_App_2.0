@@ -1,6 +1,5 @@
 package petstore.inventory;
 /**
- * Enumeration of possible feeding schedules for pets.
  * Defines the frequency at which different pets need to be fed.
  * @author Grant Peverett
  * @since March 28, 2025
@@ -10,23 +9,23 @@ package petstore.inventory;
 
 public enum FeedingSchedule {
     /**
-     * Feed once per day
+     * Feed once per day.
      */
     ONCE_DAILY,
     /**
-     * Feed twice per day
+     * Feed twice per day.
      */
     TWICE_DAILY,
     /**
-     * Feed three times per day
+     * Feed three times per day.
      */
     THREE_TIMES_DAILY,
     /**
-     * Feed once per week
+     * Feed once per week.
      */
     WEEKLY,
     /**
-     * Feed once every two weeks
+     * Feed once every two weeks.
      */
     BIWEEKLY,
 }
